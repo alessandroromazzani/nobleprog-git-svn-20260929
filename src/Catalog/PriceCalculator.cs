@@ -23,7 +23,11 @@ public class PriceCalculator
 
     public decimal Gross(Product product, int quantity)
     {
+<<<<<<< HEAD
         return Net(product, quantity) * (1 + VatFor(product));
+=======
+        return Math.Round(Net(product, quantity) * (1 + _vatRate), 2, MidpointRounding.AwayFromZero);
+>>>>>>> origin/feature/discount
     }
 
     public decimal Total(IEnumerable<(Product Product, int Quantity)> lines)
